@@ -22,3 +22,13 @@ git pull:
 5-use when you want to quickly synchronize your local branch and are confident the won't cause major conflicts. (ex - working solo or on a fast paced project). 
 
 
+#Task-3 
+How would u resolve a git merge conflict(example scenario)
+1-A merge conflict can occur when two branches modify the same line of a file in different ways. 
+2-for example, two feature branches may update the same configuration value in a shared file. 
+3-when the first branch is merged into the main branch, it succeeds because there is no conflict at that point.
+4-however, when the second branch is merged, git is unable to automatically decide which change should be kept, since both changes affect the same line,in such cases, git pauses the merge and marks the conflicting sections in the file.
+5-to resolve the conflict, the file is reviewed manually, the conflicting changes are analyzed, and a meaningful final version is created by keeping or combining the required changes.
+6-once the file is corrected, it is staged and committed, which completes the merge process.
+
+
