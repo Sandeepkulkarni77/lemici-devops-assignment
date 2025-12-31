@@ -90,7 +90,7 @@ Once the container was running, the application was verified in the following wa
 2-Screenshots 
 - Git operations
 <img width="1919" height="1021" alt="Screenshot 2025-12-31 230604" src="https://github.com/user-attachments/assets/4fe97048-c28b-4fa3-8183-8ecd383e33ba" />
--Docker Desktop showing running container
+- Docker Desktop showing running container
 <img width="1561" height="289" alt="Screenshot 2025-12-31 230728" src="https://github.com/user-attachments/assets/dbe0f927-af94-40d1-9ec5-0617b7eb059a" />
--Application running inside Docker container
+- Application running inside Docker container
 <img width="1907" height="970" alt="Screenshot 2025-12-31 230819" src="https://github.com/user-attachments/assets/ceb396bb-a802-4fdb-8a34-1e6de45a7688" />
