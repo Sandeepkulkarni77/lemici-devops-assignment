@@ -1,5 +1,5 @@
 app_name: sample-service
 environment: dev
-log_level: error  
+log_level: info   
 feature_enabled: true
 version: v1
