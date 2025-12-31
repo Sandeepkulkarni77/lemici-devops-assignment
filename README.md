@@ -87,7 +87,8 @@ Once the container was running, the application was verified in the following wa
 - The application was accessed using a web browser at http://localhost:5000.
 - A health check was performed using the /health endpoint, which returned a valid JSON response including status, timestamp, and container hostname.
 
-2-Screenshots 
+2-Screenshots
+
 • Git operations
 <img width="1919" height="1021" alt="Screenshot 2025-12-31 230604" src="https://github.com/user-attachments/assets/4fe97048-c28b-4fa3-8183-8ecd383e33ba" />
 
