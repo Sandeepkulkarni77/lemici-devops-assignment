@@ -1,5 +1,0 @@
-app_name: sample-service
-environment: dev
-log_level: debug-1 
-feature_enabled: true
-version: v1
