@@ -43,3 +43,49 @@ Resolving a git merge conflict (practical demonstration)
 8-After resolving the conflict, the file was staged and committed with the message “Resolved merge conflict in config.yaml”, which completed the merge process.
 9-This demonstrated a real-world merge conflict scenario and manual conflict resolution using git.
 
+
+Part-2: 
+#Task-1
+1-Dummy Python Web Application
+A simple Python web application was created using Flask to demonstrate Docker containerization.
+
+- The application exposes a root endpoint (/) that returns a plain text welcome message: 
+"Welcome to Sandeep's app ......"
+
+- A health check endpoint (/health) returns a JSON response containing the application status, the current UTC timestamp, and the container hostname.
+
+- An echo endpoint (/echo) accepts a JSON payload via a POST request and returns the same payload in the response.
+
+- The application runs on port 5000 and binds to 0.0.0.0 so that it can be accessed from outside the Docker container.
+2-Dockerfile 
+A Dockerfile was written to containerize the Flask application.
+The base image used is python:3.12-slim, which provides a lightweight Python runtime.
+A working directory /app is created inside the container to keep the application files organized.
+The requirements.txt file is copied first and dependencies are installed using pip. This helps Docker cache layers efficiently so dependencies are not reinstalled on every build.
+The application source file (app.py) is then copied into the container.
+Port 5000 is exposed since the Flask application runs on this port.
+Finally, the container is configured to start the application using the command python app.py.
+
+#Task-2 
+1-Difference Between Dockerfile, Docker Image, and Docker Container
+A Dockerfile is a text file that contains instructions required to build a Docker image. It defines the base image, dependencies, configuration, and commands needed to run the application.
+A Docker image is a packaged, read-only template created from a Dockerfile. It includes the application code along with all required dependencies and runtime components.
+A Docker container is a running instance of a Docker image. Containers are isolated environments where the application actually executes.
+
+2-Reducing docker image size
+If the initial Docker image size is large, it can be optimized using several approaches.
+A slim base image was used to reduce unnecessary packages and keep the image lightweight.
+Only required Python dependencies were installed, and pip cache was disabled using the --no-cache-dir option to avoid storing temporary files inside the image.
+The Dockerfile copies only the necessary application files, which helps keep the image small and clean.
+
+#Task-3 
+1-Running the application container locally
+The Docker image was built locally using the Docker CLI.
+The container was started by mapping container port 5000 to port 5000 on the host machine.
+Once the container was running, the application was verified in the following ways:
+- The container status and logs were checked using Docker Desktop to confirm that the application started successfully.
+- The application was accessed using a web browser at http://localhost:5000.
+- A health check was performed using the /health endpoint, which returned a valid JSON response including status, timestamp, and container hostname.
+
+2-Screenshots 
+
