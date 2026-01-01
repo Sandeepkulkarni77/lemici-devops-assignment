@@ -129,6 +129,7 @@ Part-4
 #Workflow execution 
 The screenshot below shows a successful execution of the GitHub Actions pipeline:
 
+
 <img width="1429" height="579" alt="Screenshot 2026-01-01 145247" src="https://github.com/user-attachments/assets/767fb501-d38e-42b8-871b-ef6e4b2ed718" />
 Deploying to Kubernetes:
 If this pipeline were extended to deploy to Kubernetes, additional steps would be added to:
@@ -136,4 +137,10 @@ If this pipeline were extended to deploy to Kubernetes, additional steps would b
 - Apply Kubernetes manifests using `kubectl`
 - Perform rolling updates and verify deployment health
 
+
+#Deploying to Kubernetes
+If this pipeline were extended to deploy to Kubernetes, additional steps would be added to:
+- Authenticate with the Kubernetes cluster (ex-AWS EKS)
+- Apply Kubernetes manifests using `kubectl`
+- Perform rolling updates and verify deployment health
 
