@@ -112,4 +112,3 @@ Why do we need EKS instead of running Kubernetes on VMs?
 2-AWS manages critical components like the API server, etcd, upgrades, high availability, and security patches. 
 3-In self-managed Kubernetes on VMs, teams must handle cluster setup, control-plane failures, upgrades, backups, and security themselves.
 4-With EKS, teams can focus on deploying and scaling applications while benefiting from deep integration with AWS services like IAM, VPC, CloudWatch, and Load Balancers.
->>>>>>> 7b91017 (updated README.md)
