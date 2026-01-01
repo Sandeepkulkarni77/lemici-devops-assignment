@@ -18,7 +18,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t part2-flask-app:latest .
+          docker build -t part2-flask-app:latest -f PART-2/Dockerfile PART-2
 
       - name: Run tests
         run: |
