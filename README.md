@@ -87,7 +87,7 @@ Once the container was running, the application was verified in the following wa
 - The application was accessed using a web browser at http://localhost:5000.
 - A health check was performed using the /health endpoint, which returned a valid JSON response including status, timestamp, and container hostname.
 
-<<<<<<< HEAD
+
 2-Screenshots
 
 • Git operations
@@ -112,3 +112,7 @@ Why do we need EKS instead of running Kubernetes on VMs?
 2-AWS manages critical components like the API server, etcd, upgrades, high availability, and security patches. 
 3-In self-managed Kubernetes on VMs, teams must handle cluster setup, control-plane failures, upgrades, backups, and security themselves.
 4-With EKS, teams can focus on deploying and scaling applications while benefiting from deep integration with AWS services like IAM, VPC, CloudWatch, and Load Balancers.
+
+#Task-2: 
+1-A LoadBalancer Service is defined to expose the application externally.
+2-This is a dummy configuration provided as YAML only and was not deployed to an actual Kubernetes cluster, as deployment was not required for this assignment.
