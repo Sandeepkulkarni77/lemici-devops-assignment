@@ -116,3 +116,16 @@ Why do we need EKS instead of running Kubernetes on VMs?
 #Task-2: 
 1-A LoadBalancer Service is defined to expose the application externally.
 2-This is a dummy configuration provided as YAML only and was not deployed to an actual Kubernetes cluster, as deployment was not required for this assignment.
+
+Part-4 
+#CI/CD pipeline 
+1-A GitHub Actions workflow is implemented to automate the CI process.
+2-The pipeline triggers on every push to the main branch and performs the following steps:
+- Checks out the source code
+- Builds the Docker image for the application
+- Runs basic tests (simulated for this assignment)
+- Simulates pushing the Docker image to DockerHub
+
+#Workflow execution 
+The screenshot below shows a successful execution of the GitHub Actions pipeline:
+
