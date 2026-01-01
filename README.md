@@ -205,4 +205,40 @@ Helps search and analyze logs efficiently.
 
 -Using these tools together gives good visibility into cluster health, application performance, and logs for debugging.
 
+Part-6:Problem solving scenario 
+
+To set up a new microservice on AWS EKS, I would follow the bellow steps: 
+
+1-Source Code Management: 
+- The application code is hosted on GitHub.
+- Developers work on feature branches and raise pull requests.
+- The main branch is protected and used for deployments.
+
+2-Containerization: 
+- I would clone the repository locally to understand and test the application.
+- A Dockerfile and dependency file (such as requirements.txt) would be added to containerize the application.
+- The Docker image would be built and tested locally to ensure the application runs correctly.
+- The image would then be pushed to a container registry such as DockerHub or Amazon ECR.
+
+3-CI/CD Automation: 
+- A CI/CD pipeline (using GitHub Actions or Jenkins) would be configured.
+- On every merge to the main branch, the pipeline would:
+  - Build the Docker image
+  - Run basic tests
+  - Push the image to the container registry
+  - Deploy the updated image to AWS EKS using Kubernetes manifests.
+
+4-Deployment to EKS:
+- Kubernetes Deployment and Service YAML files would be used to deploy the application to the EKS cluster.
+- Rolling updates would ensure zero downtime during deployments.
+
+5-Logging and Monitoring:
+- Application logs would be written to stdout/stderr so Kubernetes can capture them.
+- Logs would be collected using tools like CloudWatch or ELK stack and made accessible to the development team.
+- This allows developers to debug issues without directly accessing containers.
+
+#Overall, this approach ensures automated deployments, scalability, and visibility into application behavior while minimizing manual intervention.
+
+
+
 
