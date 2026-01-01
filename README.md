@@ -144,3 +144,65 @@ If this pipeline were extended to deploy to Kubernetes, additional steps would b
 - Apply Kubernetes manifests using `kubectl`
 - Perform rolling updates and verify deployment health
 
+
+Part-5 
+#Task1-Explain the difference between metrics, logs, and traces? 
+1-metrics: 
+Metrics are numerical values collected over time,they help us understand the overall health and performance of a system. 
+ex-cpu usaged. memory usage, request count, error rate
+Metrics are useful when we want to see trends and detect issues early,like high cpu usage or sudden spikes in traffic.
+
+2-logs: 
+Logs are detailed records of events that happen inside an application or system,they usually contain messages like errors, warnings, or info logs.
+ex-application startup logs, error messages, request/respone count. 
+Logs are mainly used for debugging because they show what exactly happened and where it failed.
+
+3-Traces: 
+Traces track the flow of a request across multiple services,they help us understand how much time is spent in each service when a request travels through a system.
+Traces are useful in microservices architectures where one request touches multiple services.
+
+#Task2-Debugging a Crashing Kubernetes Pod 
+If a k8s pod, i would debug it step by step as follows: 
+1-check pod status 
+kubectl get pods
+this tells me whether the pod is in CrashLoopBackOff, Error, or Pending state.
+
+2-describe the pod
+kubectl describe pod <pod-name> 
+this shows detailed information such as events, restart count, and possible reasons like image pull failure or resource limits.
+
+3-check container logs
+kubectl logs <pod-name>
+logs usually give the exact error message that caused the crash.
+
+4-check resource usage if needed 
+kubectl top pod <pod-name>
+this helps identify if the pod is crashing due to high CPU or memory usage.
+
+5-exec into the pod if it's running 
+kubectl exec -it <pod-name> -- /bin/sh
+this helps verify environment variables, files, or configurations inside the container.
+
+
+#Task3-Monitoring Tools for AWS EKS
+For monitoring an EKS cluster, I would suggest the following tools:
+1-prometheus: 
+Used for collecting metrics from Kubernetes and applications.
+Works well with Kubernetes and is widely adopted.
+
+2-grafana: 
+Used for visualizing metrics collected by Prometheus.
+Helps create dashboards for CPU, memory, pod status, etc.
+
+3-AWS cloudWatc: 
+Native AWS service.
+Useful for collecting logs, metrics, and setting alarms.
+Integrates easily with EKS.
+
+4-ELK Stack (elasticsearch, logstash, kibana):
+Used for centralized logging.
+Helps search and analyze logs efficiently.
+
+-Using these tools together gives good visibility into cluster health, application performance, and logs for debugging.
+
+
