@@ -136,13 +136,6 @@ Deploying to Kubernetes:
   - Perform rolling updates and verify deployment health
 
 
-#Deploying to Kubernetes
-- If this pipeline were extended to deploy to Kubernetes, additional steps would be added to:
-  - Authenticate with the Kubernetes cluster (ex-AWS EKS)
-  - Apply Kubernetes manifests using `kubectl`
-  - Perform rolling updates and verify deployment health
-
-
 # Part-5: Monitoring & Logs
 Task1-Explain the difference between metrics, logs, and traces? 
 1- metrics: 
