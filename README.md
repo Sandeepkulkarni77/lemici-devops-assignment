@@ -8,7 +8,8 @@ Task-1
 - Git operations work without username/password, confirming SSH setup.
 
 Task-2
-git fetch vs git pull 
+git fetch vs git pull
+
 git fetch:
 - Downloads new data from remote repo(commits,files).
 - Does not change you local branch,updates only remote tracking branch. Ex- origin/main. 
