@@ -87,6 +87,7 @@ Once the container was running, the application was verified in the following wa
 - The application was accessed using a web browser at http://localhost:5000.
 - A health check was performed using the /health endpoint, which returned a valid JSON response including status, timestamp, and container hostname.
 
+<<<<<<< HEAD
 2-Screenshots
 
 • Git operations
@@ -97,3 +98,18 @@ Once the container was running, the application was verified in the following wa
 
 • Application running inside Docker container
 <img width="1907" height="970" alt="Screenshot 2025-12-31 230819" src="https://github.com/user-attachments/assets/ceb396bb-a802-4fdb-8a34-1e6de45a7688" />
+=======
+ 
+Part-3: 
+#Task-1 
+Difference between Pod, Deployment, and Service: 
+1-Pod: A Pod is the smallest deployable unit in Kubernetes,it encapsulates one or more tightly coupled containers that share the same network namespace and storage,and it represents a single instance of an application.
+2-Deployment: A Deployment is a higher-level Kubernetes object that provides declarative management of applications,it manages ReplicaSets, which in turn ensure the desired number of Pods are running,deployments handle rolling updates, rollbacks, scaling, and self-healing automatically.
+3-A Service is an abstraction that exposes a logical set of Pods using labels and selectors,since Pods are ephemeral and can change IPs, a service provides a stable IP address and DNS name to reliably access an application. 
+
+Why do we need EKS instead of running Kubernetes on VMs?
+1-Amazon EKS removes the operational burden of managing the Kubernetes control plane. 
+2-AWS manages critical components like the API server, etcd, upgrades, high availability, and security patches. 
+3-In self-managed Kubernetes on VMs, teams must handle cluster setup, control-plane failures, upgrades, backups, and security themselves.
+4-With EKS, teams can focus on deploying and scaling applications while benefiting from deep integration with AWS services like IAM, VPC, CloudWatch, and Load Balancers.
+>>>>>>> 7b91017 (updated README.md)
